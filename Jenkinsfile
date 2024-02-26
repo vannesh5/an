@@ -7,14 +7,14 @@ pipeline
     {
       steps
       {
-        git "https://github.com/udayakumar99/maven_project.git"
+        git "https://github.com/SreekanthJaladanki/sample_maven_project.git"
       }
     }
     stage("Run")
     {
       steps
       {
-       sh "mvn clean"
+       sh "mvn validate"
       }
     }
   }

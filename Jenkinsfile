@@ -10,14 +10,6 @@ pipeline
         git "https://github.com/udayakumar99/maven_project.git"
       }
     }
-    stage("Run")
-    {
-      steps
-      {
-        bat "javac Demo.java"
-        bat "java Demo.java"
-      }
-    }
     stage("clean")
     {
       steps

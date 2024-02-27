@@ -14,42 +14,42 @@ pipeline
     {
       steps
       {
-        bat "mvn clean"
+        sh "mvn clean"
       }
     }
     stage("validate")
     {
       steps
       {
-        bat "mvn validate"
+        sh "mvn validate"
       }
     }
     stage("compile")
     {
       steps
       {
-        bat "mvn compile"
+        sh "mvn compile"
       }
     }
     stage("test")
     {
       steps
       {
-        bat "mvn test"
+        sh "mvn test"
       }
     }
     stage("package")
     {
       steps
       {
-        bat "mvn package"
+        sh "mvn package"
       }
     }
     stage("install")
     {
       steps
       {
-        bat "mvn install"
+        sh "mvn install"
       }
     }
   }

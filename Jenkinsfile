@@ -22,35 +22,42 @@ pipeline
     {
       steps
       {
-        "mvn clean"
+        bat "mvn clean"
       }
     }
     stage("validate")
     {
       steps
       {
-        "mvn validate"
+        bat "mvn validate"
       }
     }
     stage("compile")
     {
       steps
       {
-        "mvn test"
+        bat "mvn compile"
+      }
+    }
+    stage("test")
+    {
+      steps
+      {
+        bat "mvn test"
       }
     }
     stage("package")
     {
       steps
       {
-        "mvn package"
+        bat "mvn package"
       }
     }
     stage("install")
     {
       steps
       {
-        "mvn install"
+        bat "mvn install"
       }
     }
   }

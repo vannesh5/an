@@ -17,39 +17,18 @@ pipeline
         sh "mvn clean"
       }
     }
-    stage("validate")
+    stage("git 1")
     {
       steps
       {
-        sh "mvn validate"
+        git 'https://github.com/udayakumar99/sample26.git'
       }
     }
-    stage("compile")
+    stage("running")
     {
       steps
       {
-        sh "mvn compile"
-      }
-    }
-    stage("test")
-    {
-      steps
-      {
-        sh "mvn test"
-      }
-    }
-    stage("package")
-    {
-      steps
-      {
-        sh "mvn package"
-      }
-    }
-    stage("install")
-    {
-      steps
-      {
-        sh "mvn install"
+        sh "java Demo.java"
       }
     }
   }

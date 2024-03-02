@@ -1,7 +1,8 @@
 pipeline
 {
-  agent {
-    label nani
+  agent
+  {
+    label "nani"
   }
   stages
   {

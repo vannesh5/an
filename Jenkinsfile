@@ -1,9 +1,6 @@
 pipeline
 {
-  agent
-  {
-    label "nani"
-  }
+  agent any
   stages
   {
     stage("GIT")
@@ -25,20 +22,6 @@ pipeline
       steps
       {
         sh "mvn install"
-      }
-    }
-    stage("git 1")
-    {
-      steps
-      {
-        git 'https://github.com/udayakumar99/sample26.git'
-      }
-    }
-    stage("running")
-    {
-      steps
-      {
-        sh "java Demo.java"
       }
     }
   }

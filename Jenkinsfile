@@ -22,6 +22,7 @@ pipeline
       steps
       {
         sh "mvn install"
+        sh "pwd"
       }
     }
   }

@@ -21,13 +21,6 @@ pipeline
     {
       steps
       {
-        sh "mvn install"
-      }
-    }
-    stage("install")
-    {
-      steps
-      {
         sh "pwd"
       }
     }
